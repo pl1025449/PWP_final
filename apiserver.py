@@ -22,9 +22,7 @@ import cv2
 import numpy as np
 from flask import Flask, Response,jsonify
 from log_store import log_sto,gimmefull
-from automation import start_automation, stop_automation, update_automation
-if 'y' in input("start calibration?") and 'n' not in input("start calibration?"):
-    from calibrate import calibrate
+from automation import start_automation, stop_automation, update_automatio
 app = Flask(__name__)
 
 # Camera setup
