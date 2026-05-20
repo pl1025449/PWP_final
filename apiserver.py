@@ -126,7 +126,7 @@ def trigger():
     global should_popup
     should_popup = True
 #    messagebox.showinfo("Title", "We are not alone!")
-#    return jsonify({"ok": True})
+    return jsonify({"ok": True})
 
 
 @app.route('/reset')
