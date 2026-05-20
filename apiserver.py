@@ -22,7 +22,7 @@ import cv2
 import numpy as np
 from flask import Flask, Response,jsonify
 from log_store import log_sto,gimmefull
-from automation import start_automation, stop_automation, update_automatio
+from automation import start_automation, stop_automation, update_automation
 app = Flask(__name__)
 
 # Camera setup
