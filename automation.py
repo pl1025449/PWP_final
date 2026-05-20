@@ -78,19 +78,7 @@ def explorer(l,right,horizontal):
     print("last_c=",last_c)
     if l and right:
         return True
-    if horizontal:
-        print('turn left initialized-following horizontal')
-        log_sto('turn left initialized-following horizontal')
-        _send_command('forward')
-        time.sleep(settings[1][0])
-#        print('turn right initialized')
-        set_motor_speeds(settings[1][1])
-        time.sleep(settings[1][2])
-        _send_command('backward')
-        time.sleep(1)
-        stop_automation(True)
-        #return False
-    elif horizontal and right:
+    if horizontal and right:
         print('turn right initialized')
         log_sto('turn right initialized')
         _send_command('forward')
@@ -112,6 +100,18 @@ def explorer(l,right,horizontal):
         time.sleep(settings[1][2])
         _send_command('forward')
         time.sleep(5)
+        stop_automation(True)
+        #return False
+    elif horizontal:
+        print('turn left initialized-following horizontal')
+        log_sto('turn left initialized-following horizontal')
+        _send_command('forward')
+        time.sleep(settings[1][0])
+#        print('turn right initialized')
+        set_motor_speeds(settings[1][1])
+        time.sleep(settings[1][2])
+        _send_command('backward')
+        time.sleep(1)
         stop_automation(True)
         #return False
     elif l:
